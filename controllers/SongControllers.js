@@ -164,11 +164,13 @@ function WeeklyChartList(req,res){
 
 //fetch Top Artist from spotify by access token bearer token Authration bearer token
 function GetTopArtist(req,res){
-    
+  // new  url  >   https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=ES
+  //old url >    https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B
+    //7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B old
    
-  
+    //0TnOYISbd1XYRBk9myaseg new
     //console.log(token);
-    const url=`https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B`;
+    const url=`https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=ES`;
     fetch(url,{
         method:'GET',
         headers:{
