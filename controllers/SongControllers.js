@@ -213,7 +213,30 @@ function getTrack(req,res){
 }
 
 
+function getNewRelease(req,res){
+    fetch("https://api.spotify.com/v1/browse/new-releases?country=IN&limit=10&offset=5",{
+        method:'GET',
+        headers:{
+            'Authorization':`Bearer ${spotifyToken}`
+        }
 
+
+
+
+
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        res.send(data);
+    }
+    ).catch(err=>{
+        console.log(err);
+        res.send(err);
+    }
+    )
+
+    
+}
 
     
  
@@ -221,7 +244,7 @@ function getTrack(req,res){
 
 
 
-export {SearchTrack, TopArtists, TopTracks, TopAlbums, gettoptracksByTag,  ArtistSearch, GetSimilarTags, WeeklyChartList, GetTopArtist, getTrack};
+export {SearchTrack, TopArtists, TopTracks, TopAlbums, gettoptracksByTag,  ArtistSearch, GetSimilarTags, WeeklyChartList, GetTopArtist, getTrack,getNewRelease};
 
 
 
