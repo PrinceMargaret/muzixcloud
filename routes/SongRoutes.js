@@ -15,7 +15,7 @@ router.post("/artistSearch", ArtistSearch);
 router.post("/getSimilarTags", GetSimilarTags);
 router.post("/weeklyChartList", WeeklyChartList);
 
-
+//Spotify
 router.get("/getTrack", getTrack);
 router.get("/GetTopArtist", GetTopArtist);
 

@@ -190,7 +190,7 @@ function GetTopArtist(req,res){
 }
 
 function getTrack(req,res){
-    fetch("https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B",{
+    fetch("https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks",{
         method:'GET',
         headers:{
             'Authorization':`Bearer ${spotifyToken}`
