@@ -171,7 +171,7 @@ function GetTopArtist(req,res){
     //0TnOYISbd1XYRBk9myaseg new
   //7JDnHciIofzUbFVt83w1lR
     //console.log(token);
-    const url=`https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks`;
+    const url=`https://api.spotify.com/v1/tracks?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B`;
     fetch(url,{
         method:'GET',
         headers:{
