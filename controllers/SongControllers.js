@@ -241,7 +241,7 @@ function getNewRelease(req,res){
 function searchTrack(req,res){
     const {track}=req.query.track;
     //https://api.spotify.com/v1/search?q=believer&type=track%2Cartist&market=ES&limit=10&offset=5
-    const url=`https://api.spotify.com/v1/search?q=${track}&type=track&limit=10&offset=5`;
+    const url=`https://api.spotify.com/v1/search?q=${track}&type=track%2Cartist&limit=10&offset=5`;
     fetch(url,{
         method:'GET',
         headers:{
