@@ -238,13 +238,33 @@ function getNewRelease(req,res){
     
 }
 
+function searchTrack(req,res){
+    const {track}=req.body;
+    const url=`https://api.spotify.com/v1/search?q=${track}&type=track&limit=10&offset=5`;
+    fetch(url,{
+        method:'GET',
+        headers:{
+            'Authorization':`Bearer ${spotifyToken}`
+        }
+
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        res.send(data);
+    }
+    ).catch(err=>{
+        console.log(err);
+        res.send(err);
+    }
+    )
+}
     
  
 
 
 
 
-export {SearchTrack, TopArtists, TopTracks, TopAlbums, gettoptracksByTag,  ArtistSearch, GetSimilarTags, WeeklyChartList, GetTopArtist, getTrack,getNewRelease};
+export {SearchTrack, TopArtists, TopTracks, TopAlbums, gettoptracksByTag,  ArtistSearch, GetSimilarTags, WeeklyChartList, GetTopArtist, getTrack,getNewRelease,searchTrack};
 
 
 

@@ -1,6 +1,6 @@
 import express from 'express';
 const router=express.Router();
-import {SearchTrack, TopArtists, TopTracks, TopAlbums, gettoptracksByTag,  ArtistSearch, GetSimilarTags, WeeklyChartList,GetTopArtist,getTrack,getNewRelease} from '../controllers/SongControllers.js';
+import {SearchTrack, TopArtists, TopTracks, TopAlbums, gettoptracksByTag,  ArtistSearch, GetSimilarTags, WeeklyChartList,GetTopArtist,getTrack,getNewRelease,searchTrack} from '../controllers/SongControllers.js';
 
 
 router.post('/search', SearchTrack);
@@ -19,6 +19,7 @@ router.post("/weeklyChartList", WeeklyChartList);
 router.get("/getTrack", getTrack);
 router.get("/GetTopArtist", GetTopArtist);
 router.get("/getNewRelease",getNewRelease)
+router.post("/searchTrack", searchTrack);
 
 
 
