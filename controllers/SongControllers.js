@@ -171,7 +171,7 @@ function GetTopArtist(req,res){
     //0TnOYISbd1XYRBk9myaseg new
   //7JDnHciIofzUbFVt83w1lR
     //console.log(token);
-    const url=`https://api.spotify.com/v1/artists/7JDnHciIofzUbFVt83w1lR/top-tracks?market=ES`;
+    const url=`https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=ES`;
     fetch(url,{
         method:'GET',
         headers:{
