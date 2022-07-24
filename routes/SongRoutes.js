@@ -19,7 +19,7 @@ router.post("/weeklyChartList", WeeklyChartList);
 router.get("/getTrack", getTrack);
 router.get("/GetTopArtist", GetTopArtist);
 router.get("/getNewRelease",getNewRelease)
-router.post("/searchTrack", searchTrack);
+router.get("/searchTrack", searchTrack);
 
 
 
