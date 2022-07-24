@@ -190,7 +190,7 @@ function GetTopArtist(req,res){
 }
 
 function getTrack(req,res){
-    fetch("https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks",{
+    fetch("https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/top-tracks?market=ES",{
         method:'GET',
         headers:{
             'Authorization':`Bearer ${spotifyToken}`
